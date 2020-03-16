@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <TableLayout
+        android:id="@+id/tl_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#B15B39"
+        android:orientation="vertical">
+
+        <TableRow
+            android:id="@+id/tbr_Input1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_meccsek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#d8a765"
+                android:gravity="center"
+                android:text="@string/meccs_ek" />
+
+            <EditText
+                android:id="@+id/et_Meccs_Szam"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:background="#d8a765"
+                android:ems="10"
+                android:gravity="end"
+                android:hint="@string/meccs_szam"
+                android:inputType="numberDecimal"
+                android:text="@string/egy"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_EgyMecss"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:autofillHints=""
+                android:background="#d8a765"
+                android:ems="10"
+                android:gravity="end"
+                android:hint="@string/egy_meccs_dija"
+                android:inputType="numberDecimal"
+                android:text="@string/nulla"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_MeccsekDijja"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#d8a765"
+                android:gravity="end"
+                android:text="@string/nulla" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Input2"
+            android:layout_width="416dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_UtDij"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#d8a765"
+                android:gravity="center"
+                android:text="@string/tik_lts_g" />
+
+            <EditText
+                android:id="@+id/ed_Km"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints=""
+                android:background="#d8a765"
+                android:ems="10"
+                android:gravity="end"
+                android:hint="@string/utikoltseg_oda_vissza"
+                android:inputType="numberDecimal"
+                android:text="@string/nulla"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_MkoszNorma"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:autofillHints=""
+                android:background="#d8a765"
+                android:ems="10"
+                android:enabled="false"
+                android:gravity="end"
+                android:hint="@string/mkosz_norma"
+                android:inputType="numberDecimal"
+                android:text="@string/MkoszNormaSzam"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_Utikoltseg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#d8a765"
+                android:gravity="end"
+                android:text="@string/nulla" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Input3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_Szum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:layout_weight="5"
+                android:background="#d8a765"
+                android:gravity="end"
+                android:text="@string/Szum"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_SzumSzum"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#d8a765"
+                android:gravity="end"
+                android:text="@string/nulla"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Input4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <Button
+                android:id="@+id/btn_settings"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="@string/btn_settings" />
+
+            <Button
+                android:id="@+id/btn_kiszamol"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:text="@string/btn_kiszamol" />
+
+            <TextView
+                android:id="@+id/tv_ElszamolasMod"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:background="#d8a765"
+                android:gravity="clip_horizontal"
+                android:text="@string/TI_koltseg10_lb" />
+        </TableRow>
+
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/tl_output"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#B17E39">
+
+        <TableRow
+            android:id="@+id/tbr_Output1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_jvdij"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/jvdij"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_jvdij_nb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Output2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_Koltseg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/koltseg" />
+
+            <TextView
+                android:id="@+id/tv_koltsegHanyad"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tiz" />
+
+            <TextView
+                android:id="@+id/tv_KoltsegHanyad_nb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Output3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_JarulekAlap"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/jarulekalap"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_JarulekAlapNb"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Output4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_NyB10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/NyB10" />
+
+            <TextView
+                android:id="@+id/tv_NyB10Nb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Output5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_EBJ4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/EBJ4" />
+
+            <TextView
+                android:id="@+id/tv_EBJ4Nb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Output6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_EBJ3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/EBJ3" />
+
+            <TextView
+                android:id="@+id/tv_EBJ3Nb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/tbr_Output7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_Szja15"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/SzJA15" />
+
+            <TextView
+                android:id="@+id/tv_SzJA15Nb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Output8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_Levonasok"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/levonasok"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_JarulekokNb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tbr_Output9"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_Kifizetendo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/kifizetendo"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_KifizetendoNb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#D88665"
+                android:gravity="end"
+                android:text="@string/nulla"
+                android:textStyle="bold" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
