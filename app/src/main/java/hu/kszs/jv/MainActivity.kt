@@ -1,6 +1,7 @@
 package hu.kszs.jv
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -16,6 +17,10 @@ class MainActivity : AppCompatActivity() {
 
             kiszamolo ()
 
+        }
+        btn_settings.setOnClickListener {
+            val intent = Intent (this, MainSettings::class.java)
+            startActivity(intent)
         }
     }
 
