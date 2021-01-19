@@ -22,13 +22,14 @@
     <string name="btn_settings">Beállítások</string>
     <string name="btn_kiszamol">Számold ki</string>
     <string name="jvdij">Játékvezetődíj (bevétel):</string>
-    <string name="tiz">10</string>
+    <string name="tiz">10%</string>
     <string name="jarulekalap">Járulékalap:</string>
     <string name="koltseg">Költség:</string>
-    <string name="NyB10">Nyugdíj biztosítási járulék (10%):</string>
-    <string name="EBJ4">Egészség biztosítási járulék (4%):</string>
-    <string name="EBJ3">Egészség biztosítási járulék (3%):</string>
-    <string name="SzJA15">Személyi jövedelemadó előleg (15%):</string>
+    <string name="NyB10">TB járulék (17%):</string>
+    <string name="SzJA15">SzJA előleg (15%):</string>
     <string name="levonasok">Levonások:</string>
     <string name="kifizetendo">Kifizetendő:</string>
+    <string name="szia_sasa">Milyen elszámolási módot szeretnél</string>
+    <string name="settindgs_Ekho_rB">EKHO</string>
+    <string name="vissza">Vissza</string>
 </resources>

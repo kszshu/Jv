@@ -1,413 +1,512 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
 
-    <TableLayout
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/tl_input"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:background="#B15B39"
-        android:orientation="vertical">
-
-        <TableRow
-            android:id="@+id/tbr_Input1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_meccsek"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="#d8a765"
-                android:gravity="center"
-                android:text="@string/meccs_ek" />
-
-            <EditText
-                android:id="@+id/et_Meccs_Szam"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:autofillHints=""
-                android:background="#d8a765"
-                android:ems="10"
-                android:gravity="end"
-                android:hint="@string/meccs_szam"
-                android:inputType="numberDecimal"
-                android:text="@string/egy"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/et_EgyMecss"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:autofillHints=""
-                android:background="#d8a765"
-                android:ems="10"
-                android:gravity="end"
-                android:hint="@string/egy_meccs_dija"
-                android:inputType="numberDecimal"
-                android:text="@string/nulla"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tv_MeccsekDijja"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="#d8a765"
-                android:gravity="end"
-                android:text="@string/nulla" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tbr_Input2"
-            android:layout_width="416dp"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_UtDij"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="#d8a765"
-                android:gravity="center"
-                android:text="@string/tik_lts_g" />
-
-            <EditText
-                android:id="@+id/et_Km"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:autofillHints=""
-                android:background="#d8a765"
-                android:ems="10"
-                android:gravity="end"
-                android:hint="@string/utikoltseg_oda_vissza"
-                android:inputType="numberDecimal"
-                android:text="@string/nulla"
-                android:textSize="14sp" />
-
-            <EditText
-                android:id="@+id/et_MkoszNorma"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:autofillHints=""
-                android:background="#d8a765"
-                android:ems="10"
-                android:enabled="false"
-                android:gravity="end"
-                android:hint="@string/mkosz_norma"
-                android:inputType="numberDecimal"
-                android:text="@string/MkoszNormaSzam"
-                android:textSize="14sp" />
-
-            <TextView
-                android:id="@+id/tv_Utikoltseg"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="#d8a765"
-                android:gravity="end"
-                android:text="@string/nulla" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tbr_Input3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_Szum"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:layout_weight="5"
-                android:background="#d8a765"
-                android:gravity="end"
-                android:text="@string/Szum"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_SzumSzum"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:background="#d8a765"
-                android:gravity="end"
-                android:text="@string/nulla"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tbr_Input4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/tl_output"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012">
 
 
-            <Button
-                android:id="@+id/btn_settings"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center|center_horizontal"
-                android:text="@string/btn_settings"
-                android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tvMeccsek"
+            android:layout_width="90dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#d8a765"
+            android:gravity="center"
+            android:text="@string/meccs_ek"
+            app:layout_constraintBottom_toTopOf="@+id/tv_UtDij"
+            app:layout_constraintEnd_toStartOf="@+id/et_Meccs_Szam"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/btn_kiszamol"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center|center_horizontal"
-                android:text="@string/btn_kiszamol"
-                android:textSize="12sp" />
+        <EditText
+            android:id="@+id/et_Meccs_Szam"
+            android:layout_width="40dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:autofillHints=""
+            android:background="#d8a765"
+            android:ems="10"
+            android:gravity="end"
+            android:hint="@string/meccs_szam"
+            android:inputType="numberDecimal"
+            android:text="@string/egy"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_Km"
+            app:layout_constraintEnd_toStartOf="@+id/et_EgyMecss"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.513" />
 
-            <TextView
-                android:id="@+id/tv_ElszamolasMod"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#d8a765"
-                android:gravity="clip_horizontal"
-                android:text="@string/TI_koltseg10_lb" />
-        </TableRow>
+        <EditText
+            android:id="@+id/et_EgyMecss"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:autofillHints=""
+            android:background="#d8a765"
+            android:ems="10"
+            android:gravity="end"
+            android:hint="@string/egy_meccs_dija"
+            android:inputType="numberDecimal"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/et_MkoszNorma"
+            app:layout_constraintEnd_toStartOf="@+id/tv_MeccsekDijja"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_MeccsekDijja"
+            android:layout_width="65dp"
+            android:layout_height="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#d8a765"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/tv_Utikoltseg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_UtDij"
+            android:layout_width="90dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:background="#d8a765"
+            android:gravity="center"
+            android:text="@string/tik_lts_g"
+            app:layout_constraintEnd_toStartOf="@+id/et_Km"
+            app:layout_constraintHorizontal_bias="0.38"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_Km"
+            android:layout_width="80dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:autofillHints=""
+            android:background="#d8a765"
+            android:ems="10"
+            android:gravity="end"
+            android:hint="@string/utikoltseg_oda_vissza"
+            android:inputType="numberDecimal"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_MkoszNorma"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/et_MkoszNorma"
+            android:layout_width="40dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:autofillHints=""
+            android:background="#d8a765"
+            android:ems="10"
+            android:enabled="false"
+            android:gravity="end"
+            android:hint="@string/mkosz_norma"
+            android:inputType="numberDecimal"
+            android:text="@string/MkoszNormaSzam"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_Utikoltseg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Utikoltseg"
+            android:layout_width="65dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#d8a765"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_Szum"
+            android:layout_width="126dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:background="#d8a765"
+            android:gravity="end"
+            android:text="@string/Szum"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_SzumSzum"
+            app:layout_constraintHorizontal_bias="0.477"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_Km" />
+
+        <TextView
+            android:id="@+id/tv_SzumSzum"
+            android:layout_width="84dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#d8a765"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Utikoltseg" />
+
+        <Button
+            android:id="@+id/btn_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center|center_horizontal"
+            android:text="@string/btn_settings"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_kiszamol"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Szum" />
+
+        <Button
+            android:id="@+id/btn_kiszamol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center|center_horizontal"
+            android:text="@string/btn_kiszamol"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tv_ElszamolasMod"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Szum" />
+
+        <TextView
+            android:id="@+id/tv_ElszamolasMod"
+            android:layout_width="51dp"
+            android:layout_height="20dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:background="#d8a765"
+            android:gravity="clip_horizontal"
+            android:text="@string/TI_koltseg10_lb"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_SzumSzum"
+            app:layout_constraintVertical_bias="0.524" />
 
 
-    </TableLayout>
+    </android.support.constraint.ConstraintLayout>
 
-    <TableLayout
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/tl_output"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#B17E39">
-
-        <TableRow
-            android:id="@+id/tbr_Output1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_jvdij"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/jvdij"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_jvdij_nb"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla"
-                android:textStyle="bold" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tbr_Output2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_Koltseg"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:text="@string/koltseg" />
-
-            <TextView
-                android:id="@+id/tv_koltsegHanyad"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/tiz" />
-
-            <TextView
-                android:id="@+id/tv_Koltseg_nb"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla" />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tbr_Output3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_JarulekAlap"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/jarulekalap"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tv_JarulekAlapNb"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla"
-                android:textStyle="bold" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tbr_Output4"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_NyB10"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/NyB10" />
-
-            <TextView
-                android:id="@+id/tv_NyB10Nb"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tbr_Output5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_EBJ4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/EBJ4" />
-
-            <TextView
-                android:id="@+id/tv_EBJ4Nb"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla" />
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tbr_Output6"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/tv_EBJ3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/EBJ3" />
-
-            <TextView
-                android:id="@+id/tv_EBJ3Nb"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla" />
-        </TableRow>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#B17E39"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tl_input">
 
 
-        <TableRow
-            android:id="@+id/tbr_Output7"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_jvdij"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/jvdij"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/tv_Koltseg"
+            app:layout_constraintEnd_toStartOf="@+id/tv_jvdij_nb"
+            app:layout_constraintHorizontal_bias="0.382"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="296dp" />
 
-            <TextView
-                android:id="@+id/tv_Szja15"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/SzJA15" />
+        <TextView
+            android:id="@+id/tv_jvdij_nb"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#D88665"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="99dp" />
 
-            <TextView
-                android:id="@+id/tv_SzJA15Nb"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla" />
-        </TableRow>
 
-        <TableRow
-            android:id="@+id/tbr_Output8"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_Koltseg"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/koltseg"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_koltsegHanyad"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_jvdij_nb"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="198dp" />
 
-            <TextView
-                android:id="@+id/tv_Levonasok"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/levonasok"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_koltsegHanyad"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="28dp"
+            android:layout_marginRight="28dp"
+            android:text="@string/tiz"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_Koltseg_nb"
+            app:layout_constraintTop_toBottomOf="@+id/tv_jvdij"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="99dp" />
 
-            <TextView
-                android:id="@+id/tv_levonasokNb"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla"
-                android:textStyle="bold" />
-        </TableRow>
+        <TextView
+            android:id="@+id/tv_Koltseg_nb"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#D88665"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_jvdij_nb"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="99dp" />
 
-        <TableRow
-            android:id="@+id/tbr_Output9"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_JarulekAlap"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/jarulekalap"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_JarulekAlapNb"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Koltseg"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="296dp" />
 
-            <TextView
-                android:id="@+id/tv_Kifizetendo"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:text="@string/kifizetendo"
-                android:textStyle="bold" />
+        <TextView
+            android:id="@+id/tv_JarulekAlapNb"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#D88665"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Koltseg_nb"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="99dp" />
 
-            <TextView
-                android:id="@+id/tv_KifizetendoNb"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#D88665"
-                android:gravity="end"
-                android:text="@string/nulla"
-                android:textStyle="bold" />
-        </TableRow>
-    </TableLayout>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tv_NyB10"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/NyB10"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_NyB10Nb"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_JarulekAlap"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="296dp" />
+
+        <TextView
+            android:id="@+id/tv_NyB10Nb"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#D88665"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_JarulekAlapNb"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="99dp" />
+
+        <TextView
+            android:id="@+id/tv_Szja15"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/SzJA15"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_SzJA15Nb"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_NyB10"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="296dp" />
+
+        <TextView
+            android:id="@+id/tv_SzJA15Nb"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#D88665"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_NyB10Nb"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="99dp" />
+
+        <TextView
+            android:id="@+id/tv_Levonasok"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/levonasok"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_levonasokNb"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Szja15"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="296dp" />
+
+        <TextView
+            android:id="@+id/tv_levonasokNb"
+            android:layout_width="80dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="#D88665"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_SzJA15Nb"
+            tools:layout_conversion_absoluteHeight="24dp"
+            tools:layout_conversion_absoluteWidth="99dp" />
+
+        <TextView
+            android:id="@+id/tv_Kifizetendo"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/kifizetendo"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/tv_KifizetendoNb"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_Levonasok"
+            tools:layout_conversion_absoluteHeight="32dp"
+            tools:layout_conversion_absoluteWidth="296dp" />
+
+        <TextView
+            android:id="@+id/tv_KifizetendoNb"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="#D88665"
+            android:gravity="end"
+            android:text="@string/nulla"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_levonasokNb"
+            tools:layout_conversion_absoluteHeight="32dp"
+            tools:layout_conversion_absoluteWidth="99dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
